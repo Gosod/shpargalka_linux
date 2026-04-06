@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linux Памятка</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #22c55e;
+      --border: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 { margin: 0; font-size: 28px; }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+    }
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 18px;
+      color: var(--accent);
+    }
+    pre {
+      background: #020617;
+      padding: 10px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 13px;
+    }
+    code { color: #d1fae5; }
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐧 Linux Памятка</h1>
+  </header>
+  <main>
+
+    <section>
+      <h2>📁 Файлы и папки</h2>
+      <pre><code>pwd
+cd ..
+cd ~/tabel
+ls -la
+cp file.txt backup.txt
+mv old.txt new.txt
+rm -rf folder/</code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Просмотр и поиск</h2>
+      <pre><code>cat file.txt
+less file.txt
+head -20 file.txt
+tail -20 file.txt
+find ~ -name "file"
+grep -r "text" .</code></pre>
+    </section>
+
+    <section>
+      <h2>✏️ Редактирование</h2>
+      <pre><code>nano file.txt
+echo "text" > file.txt
+echo "text" >> file.txt</code></pre>
+    </section>
+
+    <section>
+      <h2>🔒 Права</h2>
+      <pre><code>chmod 755 script.sh
+chmod 644 file.txt
+chown user:user file</code></pre>
+    </section>
+
+    <section>
+      <h2>🐍 Python</h2>
+      <pre><code>python3 script.py
+pip3 install package
+python3 -m json.tool file.json</code></pre>
+    </section>
+
+    <section>
+      <h2>🔄 Systemd</h2>
+      <pre><code>systemctl status service
+systemctl restart service
+journalctl -u service -f</code></pre>
+    </section>
+
+    <section>
+      <h2>🌐 Nginx</h2>
+      <pre><code>nginx -t
+systemctl restart nginx</code></pre>
+    </section>
+
+    <section>
+      <h2>📊 Мониторинг</h2>
+      <pre><code>top
+htop
+df -h
+free -h
+ps aux | grep python</code></pre>
+    </section>
+
+    <section>
+      <h2>🌍 Сеть</h2>
+      <pre><code>curl http://example.com
+ping google.com
+netstat -tulpn
+ip addr</code></pre>
+    </section>
+
+    <section>
+      <h2>📦 Архивы</h2>
+      <pre><code>tar -czf archive.tar.gz folder/
+tar -xzf archive.tar.gz
+zip -r archive.zip folder/</code></pre>
+    </section>
+
+    <section>
+      <h2>⚠️ Напоминания</h2>
+      <pre><code>Ctrl+C → остановка
+Ctrl+Z → пауза
+history → история
+Tab → автодополнение</code></pre>
+    </section>
+
+  </main>
+</body>
+</html>
